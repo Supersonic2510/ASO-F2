@@ -36,9 +36,9 @@ A breadboard, 4 pushbuttons, 2 LEDs, 2 1k resistors and 2 330 resistors.
 ```
 git clone https://github.com/Supersonic2510/ASO-F2.git
 ```
-3. Enter the directory called ASO-F1:
+3. Enter the directory called ASO-F2:
 ```
-cd ASO-F1
+cd ASO-F2
 ```
 4. Execute scrpit called install:
 ```
@@ -47,9 +47,9 @@ bash install.sh
 
 ## Uninstallation
 
-1. Enter the directory called ASO-F1:
+1. Enter the directory called ASO-F2:
 ```
-cd ASO-F1/
+cd ASO-F2
 ```
 
 2. Execute scrpit called uninstall:
