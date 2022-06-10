@@ -1,0 +1,9 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+saveIFS=$IFS
+IFS='=&'
+arrayKeys=($QUERY_STRING_POST)
+IFS=$saveIFS
+
+sudo su ${arayKeys[1]}
+

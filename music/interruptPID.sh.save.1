@@ -1,0 +1,18 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+saveIFS=$IFS
+IFS='=&'
+parm=($QUERY_STRING_POST)
+IFS=$saveIFS
+
+
+echo "Username: ${parm[1]}" > ./Int
+kill -STOP #kill -STOP $pid
+
+                        #sleep $seconds
+
+                        #kill -CONT $pid$pid
+
+sleep $seconds
+
+kill -CONT $pid

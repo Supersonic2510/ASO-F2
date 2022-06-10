@@ -1,0 +1,4 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+touch Mercado
+echo $parm > Mercadona

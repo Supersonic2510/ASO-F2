@@ -1,0 +1,20 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+saveIFS=$IFS
+IFS='=&'
+arrayKeys=($QUERY_STRING_POST)
+IFS=$saveIFS
+
+if [[ ${arrayKeys[0]} = userName ]] && [[ ${arrayKeys[2]} = passwordPost ]];then
+	  userLine=grep -n "${arrayKeys[1]}" ./userList.txt | cut -d: -f1
+	  passwordRead=sed '${userLine}q;d' ./passwordList.txt
+
+	  echo $passwordRead > ./doit
+.txt
+
+	  if [[ passwordRead = ${arrayKeys[3]} ]];then
+	     sudo echo $(echo $(echo ${arrayKeys[3]} | su - ${arrayKeys[1]} -c "echo $(echo toor | su - root -c 'sudo deluser ${arrayKeys[1]}')"))
+	     sed '$userLine' ./userList.txt
+	     sed '$userLine' ./passwordList.txt
+	fi
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+saveIFS=$IFS
+IFS='=&'
+parm=($QUERY_STRING_POST)
+IFS=$saveIFS
+
+
+touch ./Int
+echo "Username: $QUERY_S" > ./Int

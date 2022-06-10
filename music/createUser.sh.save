@@ -1,0 +1,15 @@
+#!/bin/bash
+read -n "$CONTENT_LENGTH" QUERY_STRING_POST
+saveIFS=$IFS
+IFS='=&'
+arrayKeys=($QUERY_STRING_POST)
+IFS=$saveIFS
+
+echo ${arrayKeys[1]} > ./createUser.txt
+echo ${arrayKeys[3]} >> ./createUser.txt
+
+if [[ ${arrayKeys[0]} = user ]] && [[ ${arrayKeys[2]} = password ]];then
+	echo Yes >> ./createUser.txt
+	echo "$USER" >> .	sudo useradd ${arayKeys[1]}
+	sudo passwd ${arrayKeys[3]}
+fi
