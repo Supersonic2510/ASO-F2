@@ -7,7 +7,7 @@ secondmodule=$?
 if [[ $firstmodule -ne 0 ]] || [[ $secondmodule -ne 0 ]]
 then
 	#statements
-	make -s
+	make -s .
 	sudo insmod LED1.ko
 	sudo insmod LED2.ko
 	GLOBIGNORE=*.c:Makefile:*.sh:README.md
