@@ -1,5 +1,7 @@
 #!/bin/bash
-sudo bash ./ASO-F1/install.sh
+cd ./ASO-F1
+sudo bash .install.sh
+cd ..
 sudo apt-get install apache2
 sudo apt-get install sysstat
 sudo groupadd mediagroup
