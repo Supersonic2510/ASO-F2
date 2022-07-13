@@ -11,7 +11,7 @@ then
 	sudo insmod ./LED1.ko
 	sudo insmod ./LED2.ko
 	GLOBIGNORE=./*.c:./Makefile:./*.sh:./README.md
-	rm -rf ./*
+	#rm -rf ./*
 	unset GLOBIGNORE
 	rm -rf ./*.mod.c
 	touch ./output.txt
