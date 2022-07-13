@@ -13,5 +13,5 @@ sudo rm -rf /etc/apache2/
 sudo cp -r ./apache2 /etc/apache2/
 sudo chgrp -R mediagroup /media/music/
 sudo chmod -R 777 /media/music/
-cd /media/music/
-sudo bash ./startPlaylist.sh
+sleep 5
+sudo bash /media/music/startPlaylist.sh
