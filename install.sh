@@ -9,6 +9,6 @@ sudo rm -rf /media/music
 sudo cp -r ./music /media/music/
 sudo rm -rf /etc/apache2/
 sudo cp -r ./apache2 /etc/apache2/
-sudo chgrp -R mediagroup /media/music/*
-sudo chmod -R 777 /media/music/*
+sudo chgrp -R mediagroup /media/music/
+sudo chmod -R 777 /media/music/
 sudo bash /media/music/startPlaylist.sh
