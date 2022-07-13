@@ -7,16 +7,16 @@ secondmodule=$?
 if [[ $firstmodule -ne 0 ]] || [[ $secondmodule -ne 0 ]]
 then
 	#statements
-	make -s .
-	sudo insmod LED1.ko
-	sudo insmod LED2.ko
-	GLOBIGNORE=*.c:Makefile:*.sh:README.md
-	#rm -rf *
+	make -C .
+	sudo insmod ./LED1.ko
+	sudo insmod ./LED2.ko
+	GLOBIGNORE=./*.c:./Makefile:./*.sh:./README.md
+	rm -rf ./*
 	unset GLOBIGNORE
-	rm -rf *.mod.c
-	touch output.txt
+	rm -rf ./*.mod.c
+	touch ./output.txt
 	sudo mkdir /usr/lib/lkm
-	sudo mv output.txt /usr/lib/lkm
+	sudo mv ./output.txt /usr/lib/lkm
 	echo "LED module has succsefully been installed!"
 else
 	#statements
