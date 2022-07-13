@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ./ASO-F1
-sudo bash .install.sh
+sudo bash ./install.sh
 cd ..
 sudo apt-get install apache2
 sudo apt-get install sysstat
@@ -13,4 +13,5 @@ sudo rm -rf /etc/apache2/
 sudo cp -r ./apache2 /etc/apache2/
 sudo chgrp -R mediagroup /media/music/
 sudo chmod -R 777 /media/music/
+sleep 20
 sudo bash /media/music/startPlaylist.sh
